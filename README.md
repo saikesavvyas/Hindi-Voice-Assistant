@@ -17,9 +17,7 @@ The system performs speech recognition, intent processing, and natural Hindi spe
 - [Performance Characteristics](#performance-characteristics)
 - [Commands Implemented](#commands-implemented)
 - [Challenges & Solutions](#challenges--solutions)
-- [Why This Is Impressive](#why-this-is-impressive)
-- [Learning Outcomes](#learning-outcomes)
-- [Future Improvements](#future-improvements)
+- [In A Nutshell](#in-a-nutshell)
 - [Technologies Summary](#technologies-summary)
 
 ## About The Project
@@ -60,7 +58,7 @@ Hindi Speech → Offline ASR → Intent Processing → Response Generation → O
 ## Hardware Used
 ### Primary Device
 
-Raspberry Pi 4 / Raspberry Pi 5
+Raspberry Pi 4 (8 GB RAM)
 
 ARM aarch64 architecture
 
@@ -246,7 +244,7 @@ audio *= (20000 / peak)
 Solution:
 Replaced x86 binary with piper_linux_aarch64.
 
-## Why This Is Impressive
+## In a nutshell
 
 1.   Fully offline voice assistant
 2.   Neural ASR + Neural TTS on CPU
@@ -260,24 +258,6 @@ Replaced x86 binary with piper_linux_aarch64.
 2.   System-level optimization
 3.   Audio processing pipelines
 4.   Efficient model selection
-
-## Learning Outcomes
-
-1.   Offline speech AI systems
-2.   ARM-based optimization
-3.   Audio pipeline integration
-4.   Edge AI deployment
-5.   Hindi language processing challenges
-
-## Future Improvements
-
-1.   Wake-word detection
-2.   Streaming ASR
-3.   Grammar-constrained recognition
-4.   Model quantization
-5.   Noise suppression
-6.   Custom Hindi intent classifier
-7.   UI dashboard
 
 ## Technologies Summary
 | Component |	Technology |
