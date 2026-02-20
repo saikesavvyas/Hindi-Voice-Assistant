@@ -155,46 +155,37 @@ Piper synthesizes Hindi speech
 Audio played via HDMI speaker
 
 ## Optimization Decisions
+
 1️⃣ Small ASR Model
 
-Reduced RAM usage
-
-Faster inference
-
-Smooth operation on Raspberry Pi
+1.   Reduced RAM usage
+2.   Faster inference
+3.   Smooth operation on Raspberry Pi
 
 2️⃣ ONNX-Based TTS
 
-Hardware-agnostic
-
-Efficient CPU inference
-
-No GPU required
+1.   Hardware-agnostic
+2.   Efficient CPU inference
+3.   No GPU required
 
 3️⃣ Short Responses
 
-Only essential information spoken
-
-CPU & memory returned as percentages
-
-Lower response latency
+1.   Only essential information spoken
+2.   CPU & memory returned as percentages
+3.   Lower response latency
 
 ## Offline Design Justification
 
 The system is intentionally designed to be fully offline to ensure:
 
-Complete user privacy
-
-Zero cloud dependency
-
-No API keys or subscriptions
-
-Reliable operation in low-connectivity regions
-
-Demonstration of real-world edge AI
+Complete user privacy,
+Zero cloud dependency,
+No API keys or subscriptions,
+Reliable operation in low-connectivity regions,
+Demonstration of real-world edge AI.
 
 ## Performance Characteristics
-Speech Recognition
+### Speech Recognition
 
 Lightweight Hindi ASR
 
@@ -202,7 +193,7 @@ Optimized for command-based speech
 
 Stable accuracy on embedded hardware
 
-Text-to-Speech
+### Text-to-Speech
 
 Neural ONNX model
 
@@ -210,116 +201,90 @@ Natural-sounding Hindi voice
 
 Efficient ARM CPU execution
 
-Latency
+### Latency
 
 Typical response time: < 2 seconds
 
 Depends on sentence length
 
 ## Commands Implemented
-Conversational Commands
+### Conversational Commands
 
-नमस्ते
+1.   नमस्ते
+2.   तुम कौन हो
+3.   तुम क्या कर सकते हो
+4.   क्या तुम ऑनलाइन हो
+5.   कैसे हो
+6.   धन्यवाद
+7.   मदद करो
+### Functional Commands
 
-तुम कौन हो
-
-तुम क्या कर सकते हो
-
-क्या तुम ऑनलाइन हो
-
-कैसे हो
-
-धन्यवाद
-
-मदद करो
-
-Functional Commands
-
-समय बताओ
-
-सीपीयू बताओ
-
-मेमोरी बताओ
-
-बंद करो
+8.   समय बताओ
+9.   सीपीयू बताओ
+10.   मेमोरी बताओ
+11.   बंद करो
 
 ## Challenges & Solutions
-HDMI Audio Not Playing
+### HDMI Audio Not Playing
 
 Solution:
 
 aplay -D plughw:0,0
-Bluetooth Mic Instability
+### Bluetooth Mic Instability
 
 Solution:
 Switched to USB webcam microphone.
 
-Low Microphone Gain
+### Low Microphone Gain
 
 Solution:
 
 peak = np.max(np.abs(audio))
 audio *= (20000 / peak)
-ARM vs x86 Piper Binary
+### ARM vs x86 Piper Binary
 
 Solution:
 Replaced x86 binary with piper_linux_aarch64.
 
 ## Why This Is Impressive
 
-Fully offline voice assistant
+1.   Fully offline voice assistant
+2.   Neural ASR + Neural TTS on CPU
+3.   Hindi regional language support
+4.   Runs on low-power ARM device
+5.   Real-world edge AI implementation
 
-Neural ASR + Neural TTS on CPU
+### Demonstrates:
 
-Hindi regional language support
-
-Runs on low-power ARM device
-
-Real-world edge AI implementation
-
-Demonstrates:
-
-Embedded AI deployment
-
-System-level optimization
-
-Audio processing pipelines
-
-Efficient model selection
+1.   Embedded AI deployment
+2.   System-level optimization
+3.   Audio processing pipelines
+4.   Efficient model selection
 
 ## Learning Outcomes
 
-Offline speech AI systems
-
-ARM-based optimization
-
-Audio pipeline integration
-
-Edge AI deployment
-
-Hindi language processing challenges
+1.   Offline speech AI systems
+2.   ARM-based optimization
+3.   Audio pipeline integration
+4.   Edge AI deployment
+5.   Hindi language processing challenges
 
 ## Future Improvements
 
-Wake-word detection
-
-Streaming ASR
-
-Grammar-constrained recognition
-
-Model quantization
-
-Noise suppression
-
-Custom Hindi intent classifier
-
-UI dashboard
+1.   Wake-word detection
+2.   Streaming ASR
+3.   Grammar-constrained recognition
+4.   Model quantization
+5.   Noise suppression
+6.   Custom Hindi intent classifier
+7.   UI dashboard
 
 ## Technologies Summary
-Component	Technology
-ASR	Vosk + Kaldi
-TTS	Piper + ONNX Runtime
-Audio I/O	sounddevice + ALSA
-Language	Python
-OS	Raspberry Pi OS
-Hardware	Raspberry Pi (ARM)
+| Component |	Technology |
+| :--- | :--- |
+| ASR	| Vosk + Kaldi |
+| TTS	| Piper + ONNX |
+| Audio I/O	| sounddevice + ALSA |
+| lAnguage	| Python |
+| OS |	Raspberry Pi OS |
+| Hardware	| Raspberry Pi (ARM) |
