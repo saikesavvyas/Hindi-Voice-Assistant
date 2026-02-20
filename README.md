@@ -288,3 +288,9 @@ Replaced x86 binary with piper_linux_aarch64.
 | lAnguage	| Python |
 | OS |	Raspberry Pi OS |
 | Hardware	| Raspberry Pi (ARM) |
+
+## Team Members
+| S Praveen Kumar | vinupraveen2006@gmail.com |
+| :--- | :--- |
+| Sai Kesav Vyas S | saikesavv@gmail.com |
+| R SHreeram | rshreeram.ece2023@citchennai.net |
